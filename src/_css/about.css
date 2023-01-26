@@ -1,0 +1,94 @@
+.about-main-container {
+    display: flex;
+    width: 100%;
+    height: inherit;
+}
+
+/*#region ---------- profile pic ---------- */
+.profile-pic-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: inherit;
+    order: 2;
+    /* background-color: blanchedalmond; */
+}
+
+.img-container {
+    position: relative;
+    display: block;
+    width: 38vw;
+    height: 38vw;
+    /* left: 22%; */
+    -webkit-animation: tilt-in-tl 1s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: tilt-in-tl 1s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*#endregion ---------- profile pic ---------- */
+
+.about-content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: inherit;
+    padding-left: 5%;
+    order: 1;
+    gap: 14px;
+    /* background-color: red; */
+}
+
+.about-title span {
+    position: relative;
+    display: inline-block;
+    font-size: var(--titleFontSize);
+    color: var(--titleFontColor);
+    font-weight: 600;
+}
+
+.about-title :not(span:nth-child(6)).initial {
+    opacity: 0;
+    -webkit-animation: var(--animName) var(--animTiming) var(--animDelay), fade .5s var(--customFadeInDelay) forwards;
+    animation: var(--animName) var(--animTiming) var(--animDelay), fade .5s var(--customFadeInDelay) forwards;
+}
+
+.about-title span.glitch:hover {
+    animation: glitchText 0.4s linear;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about-description span {
+    position: relative;
+    display: block;
+    font-size: var(--descFontSize);
+    color: var(--sideMenuFontColorActive);
+    font-weight: 300;
+}
+
+.about-description span:nth-child(1) {
+    -webkit-animation: slide-in-elliptic-bottom-fwd 0.7s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-bottom-fwd 0.7s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.about-description span:nth-child(2) {
+    -webkit-animation: slide-in-elliptic-bottom-fwd 0.7s 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-bottom-fwd 0.7s 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.about-description span:nth-child(3) {
+    -webkit-animation: slide-in-elliptic-bottom-fwd 0.7s 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-bottom-fwd 0.7s 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}

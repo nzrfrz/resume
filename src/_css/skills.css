@@ -1,0 +1,219 @@
+.skills-main-container {
+    display: flex;
+    width: 100%;
+    height: inherit;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/*#region ---------- content ---------- */
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 5%;
+}
+
+.skills-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-title-above span,
+.skills-title-below span {
+    position: relative;
+    display: inline-block;
+    font-size: 4.5vw;
+    color: var(--titleFontColor);
+    font-weight: 600;
+}
+
+.skills-title-below span {
+    top: -20px;
+}
+
+.skills-title-above span.initial {
+    opacity: 0;
+    -webkit-animation: var(--animName) var(--animTiming) var(--animDelay), fade .5s var(--customFadeInDelay) forwards;
+    animation: var(--animName) var(--animTiming) var(--animDelay), fade .5s var(--customFadeInDelay) forwards;
+}
+
+.skills-title-below span.initial {
+    opacity: 0;
+    -webkit-animation: var(--animName) var(--animTiming) var(--animDelay), fade .5s var(--customFadeInDelay) forwards;
+    animation: var(--animName) var(--animTiming) var(--animDelay), fade .5s var(--customFadeInDelay) forwards;
+}
+
+.skills-title-above span.glitch:hover {
+    animation: glitchText 0.4s linear;
+}
+
+.skills-title-below span.glitch:hover {
+    animation: glitchText 0.4s linear;
+}
+
+.skills-desc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skills-desc span {
+    font-size: var(--descFontSize);
+    color: var(--sideMenuFontColorActive);
+    font-weight: 300;
+}
+
+.skills-desc span:nth-child(1) {
+    -webkit-animation: slide-in-elliptic-bottom-fwd 0.7s 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-bottom-fwd 0.7s 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.skills-desc span:nth-child(2) {
+    -webkit-animation: slide-in-elliptic-bottom-fwd 0.7s 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-bottom-fwd 0.7s 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/*#endregion ---------- content ---------- */
+
+.skills-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 3vw;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.circle-progress {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(var(--bodyBGC) 0deg, var(--bodyBGC) 0deg);
+    animation: conicGradient 2s var(--conicGradientDegDelay) forwards;
+}
+
+.experience-skill-icon {
+    z-index: 3;
+    color: var(--iconColor);
+    font-size: 45px;
+    opacity: 0;
+    animation: zoomIn 2s var(--conicGradientDegDelay), fade 2s var(--conicGradientDegDelay) forwards;
+}
+
+.circle-progress-circleLayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: var(--bodyBGC);
+    animation: animateDotV2 var(--animationDuration) var(--animateDotDelay) linear forwards;
+}
+
+.circle-progress-circleLayer90 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: transparent;
+    animation: animateDot90 var(--animationDuration) var(--animateDotDelay) linear forwards;
+}
+
+.circle-progress-circleLayer180 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: transparent;
+    animation: animateDot180 var(--animationDuration) var(--animateDotDelay) linear forwards;
+}
+
+.circle-progress-circleLayer270 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: transparent;
+    animation: animateDot270 var(--animationDuration) var(--animateDotDelay) linear forwards;
+}
+
+.rotate-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--iconColor);
+    top: -9.5%;
+    box-shadow: 0 0 10px var(--iconColor), 0 0 30px var(--iconColor);
+    transform: translateX(-10%);
+    opacity: 0;
+    animation: fade 2s var(--animateDotDelay) forwards;
+}
+
+/*#region ---------- circle animation ---------- */
+@keyframes animateDotV2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--percentage)));
+    }
+}
+
+@keyframes animateDot90 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--90deg)));
+    }
+}
+
+@keyframes animateDot180 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--180deg)));
+    }
+}
+
+@keyframes animateDot270 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--270deg)));
+    }
+}
+
+@keyframes conicGradient {
+    0% {
+        background: conic-gradient(var(--bodyBGC) var(--conicGradientDeg), var(--bodyBGC) 0deg);
+    }
+    100% {
+        background: conic-gradient(var(--iconColor) var(--conicGradientDeg), var(--bodyBGC) 0deg);
+    }
+}
+/*#endregion ---------- circle animation ---------- */

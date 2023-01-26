@@ -1,0 +1,393 @@
+.mobile-menu-container {
+    display: none;
+    /* z-index: 6; */
+    position: absolute;
+    justify-content: center;
+    width: 100vw;
+    bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.mobile-menu {
+    z-index: 6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 70px;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: #2D3446;
+    backdrop-filter: blur(8.5px);
+}
+
+.mobile-menu a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 17%;
+}
+
+.mobile-menu a img {
+    position: relative;
+    z-index: 2;
+    width: 15px;
+}
+
+.mobile-menu a:nth-child(1) img {
+    transform: scale(0.9);
+}
+
+.mobile-menu a span {
+    position: absolute;
+    color: white;
+    font-size: 32px;
+}
+
+/* .mobile-menu a span:nth-child(1) {
+    z-index: 2;
+} */
+
+.mobile-menu a span:nth-child(2) {
+    position: absolute;
+    font-size: 16px;
+    top: 3px;
+    opacity: 0;
+    color: #067481;
+    text-shadow: 0 0 10px #067481, 0 0 30px #067481;
+	-webkit-animation: tracking-out-contract 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: tracking-out-contract 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.mobile-menu a.active span:nth-child(2) {
+	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.indicator {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -57%;
+    width: 80px;
+    height: 40px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    background: #2D3446;
+    backdrop-filter: blur(8.5px);
+    transition: 0.5s;
+}
+
+.indicator-inset {
+    position: relative;
+    z-index: 3;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #067481;
+    transition: 0.5s;
+}
+
+/*#region ---------- home ---------- */
+.mobile-menu a:nth-child(1).active ~ .indicator {
+    transform: translateX(-125%);
+}
+
+.mobile-menu a.active img.home-icon {
+    /* position: relative; */
+    /* z-index: 2; */
+    /* width: 15px; */
+    transform: scale(1.3) translate(6%, -112%);
+    transition: 0.5s;
+}
+
+.mobile-menu a img.home-icon {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(1).active ~ .indicator::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    border-radius: 50%;
+    top: 74%;
+    left: -19%;
+    box-shadow: 11px 1px #2D3446;
+    transform: rotate(13deg);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(1).active ~ .indicator::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 63%;
+    right: -18%;
+    background: transparent;
+    box-shadow: 5px 7px #2D3446;
+    transform: scaleX(-1) rotate(-10deg);
+    transition: 0.5s;
+}
+/*#endregion ---------- home ---------- */
+
+
+/*#region ---------- about ---------- */
+.mobile-menu a:nth-child(2).active ~ .indicator {
+    transform: translateX(-61.5%);
+}
+
+.mobile-menu a:nth-child(2).active img {
+    transform: scale(1.8) translate(6%, -112%);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(2) img {
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(2).active ~ .indicator::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 63%;
+    left: -18%;
+    background: transparent;
+    box-shadow: 5px 7px #2D3446;
+    transform: rotate(-12deg);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(2).active ~ .indicator::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 63%;
+    right: -18%;
+    background: transparent;
+    box-shadow: 5px 7px #2D3446;
+    transform: scaleX(-1) rotate(-10deg);
+    transition: 0.5s;
+}
+/*#endregion ---------- about ---------- */
+
+
+/*#region ---------- experience ---------- */
+.mobile-menu a:nth-child(3).active ~ .indicator {
+    transform: translateX(2.5%);
+}
+
+.mobile-menu a:nth-child(3).active img {
+    transform: scale(1.8) translate(5%, -105%);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(3) img {
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(3).active ~ .indicator::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 63%;
+    left: -18%;
+    background: transparent;
+    box-shadow: 5px 7px #2D3446;
+    transform: rotate(-12deg);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(3).active ~ .indicator::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 63%;
+    right: -18%;
+    background: transparent;
+    box-shadow: 5px 7px #2D3446;
+    transform: scaleX(-1) rotate(-10deg);
+    transition: 0.5s;
+}
+/*#endregion ---------- experience ---------- */
+
+
+/*#region ---------- projects ---------- */
+.mobile-menu a:nth-child(4).active ~ .indicator {
+    transform: translateX(65%);
+}
+
+.mobile-menu a:nth-child(4).active img {
+    transform: scale(1.8) translate(15%, -105%);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(4) img {
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(4).active ~ .indicator::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 63%;
+    left: -18%;
+    background: transparent;
+    box-shadow: 5px 7px #2D3446;
+    transform: rotate(-12deg);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(4).active ~ .indicator::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 63%;
+    right: -18%;
+    background: transparent;
+    box-shadow: 5px 7px #2D3446;
+    transform: scaleX(-1) rotate(-10deg);
+    transition: 0.5s;
+    /* content: "";
+    z-index: 2;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 83%;
+    right: -19%;
+    background: transparent;
+    box-shadow: 12px 5px #2D3446;
+    transform: scaleX(-1);
+    transition: 0.5s; */
+}
+/*#endregion ---------- projects ---------- */
+
+
+/*#region ---------- contact ---------- */
+.mobile-menu a:nth-child(5).active ~ .indicator {
+    transform: translateX(125%);
+}
+
+.mobile-menu a:nth-child(5).active img {
+    transform: scale(1.8) translate(-10%, -105%);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(5) img {
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(5).active ~ .indicator::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 63%;
+    left: -18%;
+    background: transparent;
+    box-shadow: 5px 7px #2D3446;
+    transform: rotate(-12deg);
+    transition: 0.5s;
+}
+
+.mobile-menu a:nth-child(5).active ~ .indicator::after {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    border-radius: 50%;
+    top: 74%;
+    right: -18.5%;
+    box-shadow: 11px 1px #2D3446;
+    transform: scaleX(-1) rotate(14deg);
+    transition: 0.5s;
+}
+/*#endregion ---------- contact ---------- */
+
+
+/*#region ---------- animation ---------- */
+@-webkit-keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+                transform: translateZ(-700px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        opacity: 1;
+    }
+}
+@keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+                transform: translateZ(-700px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes tracking-out-contract {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+}
+@keyframes tracking-out-contract {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+}
+/*#endregion ---------- animation ---------- */

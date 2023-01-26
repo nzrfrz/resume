@@ -1,0 +1,343 @@
+.home-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: inherit;
+}
+
+.intro-wrapper {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    padding-left: 5%;
+}
+
+.intro-wrapper div:nth-child(1) span {
+    position: relative;
+    display: inline-block;
+    font-size: var(--titleFontSize);
+    color: var(--sideMenuFontColorActive);
+    font-weight: 600;
+}
+
+.intro-wrapper div:nth-child(1) span.initial {
+    -webkit-animation: var(--animName) var(--animTiming) var(--animDelay) var(--animEase) both;
+    animation: var(--animName) var(--animTiming) var(--animDelay) var(--animEase) both;
+}
+
+.intro-wrapper div:nth-child(1) span.glitch:hover,
+.intro-wrapper div:nth-child(2) span.glitch:hover {
+    animation: glitchText 0.4s linear;
+}
+
+.intro-wrapper div:nth-child(2) span {
+    position: relative;
+    display: inline-block;
+    font-size: var(--titleFontSize);
+    color: var(--sideMenuFontColorActive);
+    font-weight: 600;
+}
+
+.intro-wrapper div:nth-child(2) span.initial:nth-child(1) {
+    -webkit-animation: slide-in-elliptic-bottom-fwd 0.7s 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-bottom-fwd 0.7s 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.intro-wrapper div:nth-child(2) span.initial:nth-child(n + 3) {
+    opacity: 0;
+    color: var(--titleFontColor);
+    -webkit-animation: var(--animName) var(--animTiming) var(--animDelay), fade .5s var(--customFadeInDelay) forwards;
+    animation: var(--animName) var(--animTiming) var(--animDelay), fade .5s var(--customFadeInDelay) forwards;
+}
+
+.intro-wrapper div:nth-child(2) span.glitch:nth-child(n + 3) {
+    color: var(--titleFontColor);
+}
+
+.intro-wrapper div:nth-child(3) span {
+    position: relative;
+    display: inline-block;
+    font-size: var(--homePositionFontSize);
+    color: var(--sideMenuFontColorActive);
+    font-weight: 300;
+    -webkit-animation: bounce-in-right 1.1s var(--animDelay) both;
+    animation: bounce-in-right 1.1s var(--animDelay) both;
+}
+
+.intro-wrapper div:nth-child(4) span {
+    position: relative;
+    display: inline-block;
+    font-size: var(--hometechUsedFontSize);
+    color: var(--sideMenuFontColorActive);
+    font-weight: 300;
+    -webkit-animation: swing-in-right-bck 0.6s 2.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-right-bck 0.6s 2.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+
+/*#region ---------- ring ---------- */
+.home-ring-wrapper {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: inherit;
+    -webkit-animation: slide-in-bl 2s 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, floating 6s ease-in-out alternate-reverse infinite;
+    animation: slide-in-bl 2s 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, floating 6s ease-in-out alternate-reverse infinite;
+}
+
+.ring-effects {
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform-style: preserve-3d;
+    -webkit-animation: circular 22s linear infinite;
+    animation: circular 22s linear infinite;
+}
+
+.icon-wrapper {
+    color: var(--iconColor);
+    font-size: 5vw;
+}
+
+.ring-effects .icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--itemIndex) * 32deg)) translateZ(25vw);
+}
+/*#endregion ---------- ring ---------- */
+
+/*#region ---------- text animation ---------- */
+
+/**
+ * ----------------------------------------
+ * animation tilt-in-fwd-tr
+ * ----------------------------------------
+ */
+@-webkit-keyframes tilt-in-fwd-tr {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+                transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+                transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    }
+}
+@keyframes tilt-in-fwd-tr {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+                transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+                transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-in-right {
+    0% {
+        -webkit-transform: translateX(600px);
+                transform: translateX(600px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        -webkit-transform: translateX(68px);
+                transform: translateX(68px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+    }
+    72% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+    }
+    81% {
+        -webkit-transform: translateX(32px);
+                transform: translateX(32px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+    }
+    90% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+    }
+    95% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+    }
+}
+@keyframes bounce-in-right {
+    0% {
+        -webkit-transform: translateX(600px);
+                transform: translateX(600px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        -webkit-transform: translateX(68px);
+                transform: translateX(68px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+    }
+    72% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+    }
+    81% {
+        -webkit-transform: translateX(32px);
+                transform: translateX(32px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+    }
+    90% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+    }
+    95% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation swing-in-right-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes swing-in-right-bck {
+    0% {
+        -webkit-transform: rotateY(70deg);
+                transform: rotateY(70deg);
+        -webkit-transform-origin: right;
+                transform-origin: right;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+        -webkit-transform-origin: right;
+                transform-origin: right;
+        opacity: 1;
+    }
+}
+@keyframes swing-in-right-bck {
+    0% {
+        -webkit-transform: rotateY(70deg);
+                transform: rotateY(70deg);
+        -webkit-transform-origin: right;
+                transform-origin: right;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+        -webkit-transform-origin: right;
+                transform-origin: right;
+        opacity: 1;
+    }
+}
+  
+  
+/*#endregion ---------- text animation ---------- */
+
+/*#region ---------- ring animation ---------- */
+@keyframes circular {
+    0% {
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(-8vw);
+    }
+    100% {
+        transform: translateY(3vw);
+    }
+}
+
+@-webkit-keyframes slide-in-bl {
+    0% {
+        -webkit-transform: translateY(1000px) translateX(-1000px);
+        transform: translateY(1000px) translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bl {
+    0% {
+        -webkit-transform: translateY(1000px) translateX(-1000px);
+        transform: translateY(1000px) translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+}
+/*#endregion ---------- ring animation ---------- */
