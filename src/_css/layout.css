@@ -68,7 +68,7 @@
     animation: glitchText 0.4s linear;
 }
 
-.route-link-wrapper a:hover::after {
+.route-link-wrapper a:not(.active):not(.sidemenu-socmed-container a):hover::after {
     opacity: 1;
     animation: glitchLine 0.4s steps(2, start) forwards;
 }
@@ -104,29 +104,36 @@
 
 /*#region ---------- side menu socmed container ---------- */
 .sidemenu-socmed-container {
+    /* position: relative; */
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    /* background-color: #fff; */
-}
-
-.sidemenu-socmed-container a {
-    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    /* justify-content: space-evenly; */
+    width: 100%;
+    gap: 10px;
     /* background-color: red; */
 }
 
-.sidemenu-socmed-container a .socmed-icon {
+.sidemenu-socmed-container a {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 35px;
+    height: 35px;
+}
+
+.socmed-icon {
     color: white;
-    font-size: 25px;
+    font-size: 35px;
+    object-fit: contain;
+    /* background-color: black; */
 }
 
 .sidemenu-socmed-container a img {
     width: 100%;
     object-fit: cover;
+    /* background-color: black; */
 }
 /*#endregion ---------- side menu socmed container ---------- */
 

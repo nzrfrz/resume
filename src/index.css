@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,8 +25,8 @@ body {
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  /* -ms-overflow-style: none; */
-  /* scrollbar-width: none; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   background-color: var(--bodyBGC);
 }
 

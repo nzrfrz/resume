@@ -46,9 +46,9 @@ const socialLink = [
         label: "Resume",
         iconType: "image",
         icon: cvIcon,
-        url: "",
+        url: myCV,
     },
-]
+];
 
 export const Layout = () => {
     const [fabOpen,  setFabOpen] = useState(false);
@@ -76,30 +76,48 @@ export const Layout = () => {
                 <div className="route-link-wrapper">
                     <NavLink to={"/about"} rel="noopener noreferrer">
                         <span>About</span>
-                        <span></span>
                     </NavLink>
                     <NavLink to={"/skills"} rel="noopener noreferrer">
                         <span>Skills</span>
-                        <span></span>
                     </NavLink>
                     <NavLink to={"/projects"} rel="noopener noreferrer">
                         <span>Projects</span>
-                        <span></span>
                     </NavLink>
                     <NavLink to={"/contact"} rel="noopener noreferrer">
                         <span>Contact</span>
-                        <span></span>
                     </NavLink>
                     <a href={myCV} without rel="noopener noreferrer" target="_blank">
                         <span>Resume</span>
                     </a>
+                    
+                    <div className="sidemenu-socmed-container">
+                        {
+                            socialLink.slice(0, -1).map((data, index) => 
+                            <a 
+                                key={index}
+                                href={data.url}
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                style={{
+                                    "--translateY": (index * 150) + 150,
+                                }}
+                            >
+                                {
+                                    data.iconType === "image" ?
+                                    <img src={data.icon} alt="nzrfrz" className="socmed-image" />
+                                    :
+                                    data.icon
+                                }
+                            </a>
+                            )
+                        }
+                    </div>
                 </div>
-                <div className="sidemenu-socmed-container">
+                {/* <div className="sidemenu-socmed-container">
                     {
                         socialLink.slice(0, -1).map((data, index) => 
                         <a 
                             key={index}
-                            // className={fabOpen ? "soc-btn-show" : "soc-btn-hidden"}
                             href={data.url}
                             target="_blank" 
                             rel="noopener noreferrer"
@@ -116,7 +134,7 @@ export const Layout = () => {
                         </a>
                         )
                     }
-                </div>
+                </div> */}
             </div>
 
             <div className="body-container" style={{ "--opacity": fabOpen === true ? 0.3 : 1 }} >

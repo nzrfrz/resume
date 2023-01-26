@@ -42,7 +42,7 @@
 .project-image-container img,
 .project-image-container-exit img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .swiper-slide {
