@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/resume/static/css/main.6e9d1f83.css",
-    "main.js": "/resume/static/js/main.9b1f0928.js",
+    "main.js": "/resume/static/js/main.2faad3ec.js",
     "static/media/iboost-mobile (3).png": "/resume/static/media/iboost-mobile (3).53b2e3815724c0c8328f.png",
     "static/media/iboost-mobile (4).png": "/resume/static/media/iboost-mobile (4).95031a374fda40bf7e73.png",
     "static/media/missing-alphabet (5).png": "/resume/static/media/missing-alphabet (5).c684e3145f0324af2b09.png",
@@ -65,10 +65,10 @@
     "static/media/icons8-google-play-480.png": "/resume/static/media/icons8-google-play-480.b3d7d1c1f24f6fb70fb3.png",
     "index.html": "/resume/index.html",
     "main.6e9d1f83.css.map": "/resume/static/css/main.6e9d1f83.css.map",
-    "main.9b1f0928.js.map": "/resume/static/js/main.9b1f0928.js.map"
+    "main.2faad3ec.js.map": "/resume/static/js/main.2faad3ec.js.map"
   },
   "entrypoints": [
     "static/css/main.6e9d1f83.css",
-    "static/js/main.9b1f0928.js"
+    "static/js/main.2faad3ec.js"
   ]
 }
