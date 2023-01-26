@@ -7,6 +7,10 @@
     scrollbar-width: none;
 }
 
+.contact-main-container::-webkit-scrollbar {
+    display: none;
+}
+
 .contact-content-container {
     display: flex;
     flex-direction: column;
