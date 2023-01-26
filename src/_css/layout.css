@@ -22,8 +22,8 @@
 .logo-wrapper a {
     text-decoration: none;
     display: flex;
-    width: 120px;
-    height: 120px;
+    width: 10vw;
+    height: 10vw;
 }
 
 .logo-wrapper a img {

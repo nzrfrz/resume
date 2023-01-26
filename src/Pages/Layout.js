@@ -15,6 +15,8 @@ import googlePlayIcon from "../Assets/images/icons8-google-play-480.png";
 import linkedinIcon from "../Assets/images/icons8-linkedin-2-480.png";
 import cvIcon from "../Assets/images/icons8-cv-96.png";
 
+import myCV from "../Assets/pdf/nizar-farizi-CV.pdf";
+
 const socialLink = [
     {
         label: "LinkedIn",
@@ -72,23 +74,23 @@ export const Layout = () => {
                     </NavLink>
                 </div>
                 <div className="route-link-wrapper">
-                    <NavLink to={"/about"}>
+                    <NavLink to={"/about"} rel="noopener noreferrer">
                         <span>About</span>
                         <span></span>
                     </NavLink>
-                    <NavLink to={"/skills"}>
+                    <NavLink to={"/skills"} rel="noopener noreferrer">
                         <span>Skills</span>
                         <span></span>
                     </NavLink>
-                    <NavLink to={"/projects"}>
+                    <NavLink to={"/projects"} rel="noopener noreferrer">
                         <span>Projects</span>
                         <span></span>
                     </NavLink>
-                    <NavLink to={"/contact"}>
+                    <NavLink to={"/contact"} rel="noopener noreferrer">
                         <span>Contact</span>
                         <span></span>
                     </NavLink>
-                    <a href="" >
+                    <a href={myCV} without rel="noopener noreferrer" target="_blank">
                         <span>Resume</span>
                     </a>
                 </div>
@@ -100,6 +102,7 @@ export const Layout = () => {
                             // className={fabOpen ? "soc-btn-show" : "soc-btn-hidden"}
                             href={data.url}
                             target="_blank" 
+                            rel="noopener noreferrer"
                             style={{
                                 "--translateY": (index * 150) + 150,
                             }}
@@ -167,6 +170,7 @@ export const Layout = () => {
                         key={index}
                         className={fabOpen ? "soc-btn-show" : "soc-btn-hidden"}
                         href={data.url}
+                        rel="noopener noreferrer"
                         target="_blank" 
                         style={{
                             "--translateY": (index * 150) + 150,

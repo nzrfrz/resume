@@ -285,12 +285,6 @@ export const Projects = () => {
 
     const imageMargin = useCallback((data) => {
         switch (true) {
-            // case data.imagePlacement === "left" && data.imageMode === "portrait":
-            //     return 20;
-            // case data.imagePlacement === "left" && data.imageMode === "landscape":
-            //     return 0;
-            // case data.imagePlacement === "right" && data.imageMode === "landscape":
-            //     return "none";
             case data.imagePlacement === "right" && data.imageMode === "portrait":
                 return 25;
             case data.imagePlacement === "right" && data.imageMode === "landscape":
@@ -302,7 +296,7 @@ export const Projects = () => {
             default:
                 return 0;
         }
-    }, [projectsData]);
+    }, []);
 
     const marginAtViewMore = useCallback((data) => {
         switch (true) {
@@ -317,7 +311,7 @@ export const Projects = () => {
             default:
                 return 0;
         }
-    }, [projectsData]);
+    }, []);
 
     return (
         <div className="projects-main-container">
@@ -365,7 +359,7 @@ export const Projects = () => {
                                     }
                                 </Swiper>
                                 :
-                                <img src={data.imageThumb} alt="portrait-image" />
+                                <img src={data.imageThumb} alt="nzrfrz" />
                             }
                         </div>
 
@@ -394,6 +388,7 @@ export const Projects = () => {
                                     <a 
                                         key={linkIndex} 
                                         href={linkItem.url} 
+                                        rel="noopener noreferrer"
                                         target="_blank" 
                                         style={{
                                             "--iconColor": linkItem.iconColor

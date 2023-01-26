@@ -23,7 +23,6 @@ const contactPerson = [
         label: "gmail",
         image: gmailIcon,
         href: "https://mail.google.com/mail/?view=cm&fs=1&to=nzr.frz@gmail.com",
-        // href: "mailto:nzr.frz@gmail.com",
     },
 ]
 
@@ -78,7 +77,7 @@ export const Contact = () => {
                 <div className="contact-link">
                     {
                         contactPerson.map((data, index) => 
-                        <a key={index} href={data.href} target="_blank">
+                        <a key={index} href={data.href} target="_blank"  rel="noreferrer noopener">
                             <div className="cp-glitch" style={{ backgroundImage: `url(${data.image})` }} >
                             {
                                 [...Array(5).keys()].map((imgCloneData, imgCloneIndex) => 
@@ -92,9 +91,9 @@ export const Contact = () => {
                 </div>
             </div>
             <div ref={containerRef} className="contact-location-container">
-                {/* <GlobeGL 
+                <GlobeGL 
                     width={containerWidth}
-                /> */}
+                />
             </div>
             <div className="contact-margin-bottom" />
         </div>

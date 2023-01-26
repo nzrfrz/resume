@@ -6,6 +6,10 @@
     scrollbar-width: none;
 }
 
+.skills-main-container::-webkit-scrollbar {
+    display: none;
+}
+
 /*#region ---------- content ---------- */
 .skills-content {
     display: flex;
@@ -99,7 +103,8 @@
     height: 120px;
     border-radius: 50%;
     background: conic-gradient(var(--bodyBGC) 0deg, var(--bodyBGC) 0deg);
-    animation: conicGradient 2s var(--conicGradientDegDelay) forwards;
+    opacity: 0;
+    animation: conicGradient 2s var(--conicGradientDegDelay) forwards, fade 2s 1.5s forwards;
 }
 
 .experience-skill-icon {
