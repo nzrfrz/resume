@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.c599befb.css",
+    "main.css": "/resume/static/css/main.e9ca83b6.css",
     "main.js": "/resume/static/js/main.09b8043e.js",
     "static/media/iboost-mobile (3).png": "/resume/static/media/iboost-mobile (3).53b2e3815724c0c8328f.png",
     "static/media/iboost-mobile (4).png": "/resume/static/media/iboost-mobile (4).95031a374fda40bf7e73.png",
@@ -65,11 +65,11 @@
     "static/media/icons8-telegram-app-480.png": "/resume/static/media/icons8-telegram-app-480.493390b6ec3bc5631494.png",
     "static/media/icons8-google-play-480.png": "/resume/static/media/icons8-google-play-480.b3d7d1c1f24f6fb70fb3.png",
     "index.html": "/resume/index.html",
-    "main.c599befb.css.map": "/resume/static/css/main.c599befb.css.map",
+    "main.e9ca83b6.css.map": "/resume/static/css/main.e9ca83b6.css.map",
     "main.09b8043e.js.map": "/resume/static/js/main.09b8043e.js.map"
   },
   "entrypoints": [
-    "static/css/main.c599befb.css",
+    "static/css/main.e9ca83b6.css",
     "static/js/main.09b8043e.js"
   ]
 }
